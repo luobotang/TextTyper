@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Text Typer Example</title>
+	<link rel="stylesheet" href="typebox.css" />
+</head>
+<body>
+
+<div class="flexbox">
+	<div id="box"></div>
+</div>
+<div id="print">开始吧!</div>
+
+<audio id="keyboard_sound" loop="true" preload="true" src="keyboard.mp3"></audio>
+
+<script src="../TextTyper.js"></script>
+<script src="example_article.txt"></script>
+<script>
+var started = false,
+	print = document.getElementById("print");
+print.onclick = function () {
+	if (started) {
+		TextTyper.pause();
+		print.parentNode.removeChild(print);
+	} else {
+		print.innerHTML = "可以啦，打字很熟练！";
+		TextTyper.print(document.getElementById("box"), article);
+		started = true;
+	}
+}
+</script>
+
+</body>
+</html>

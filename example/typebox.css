@@ -1,0 +1,42 @@
+body, div, p {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: url("bg.png") repeat scroll;
+	font: 20px "微软雅黑";
+}
+.flexbox {
+	background-color: #eee;
+	border: 1px solid #eee;
+	display: flex;
+	opacity: 0.6;
+	flex-direction: column;
+	height: 20em;
+	justify-content: flex-end;
+	line-height: 2em;
+	margin: 100px auto 20px;
+	overflow-y: scroll;
+	position: relative;
+	width: 30em;
+}
+#box {
+	margin: 0 1em;
+	text-indent: 2em;
+}
+#print {
+	position: relative;
+	margin: 0 auto;
+	width: 30em;
+	line-height: 2em;
+	height: 2em;
+	opacity: 0.6;
+	background-color: #eee;
+	text-align: center;
+	cursor: pointer;
+	color: #666;
+}
+#print:hover {
+	background-color: #69d;
+	color: #fff;
+}
