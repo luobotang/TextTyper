@@ -1,0 +1,34 @@
+{
+  "name": "text-typer",
+  "version": "0.2.0",
+  "description": "text typer",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "start test/test.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luobotang/TextTyper.git"
+  },
+  "keywords": [
+    "text",
+    "typer"
+  ],
+  "author": "luobotang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luobotang/TextTyper/issues"
+  },
+  "homepage": "https://github.com/luobotang/TextTyper#readme",
+  "dependencies": {
+    "eventemitter": "^0.3.3",
+    "extend": "^3.0.0"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^4.0.0"
+  }
+}

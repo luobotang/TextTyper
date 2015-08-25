@@ -1,0 +1,1 @@
+window.TextTyper = require('./index')

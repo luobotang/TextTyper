@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TextTyper</title>
+<style>
+* { margin: 0; padding: 0; }
+body { background: #eee; }
+#paper {
+	position: relative;
+	height: 30em; width: 30em; margin: 30px auto; padding: 50px 30px;
+	font: 18px/2 consolas, monospace;
+	color: #666;
+	text-shadow: 1px 1px #eee;
+	background: #fff;
+}
+#paper button {
+	position: absolute; top: 0; right: 0;
+}
+</style>
+</head>
+<body>
+<div id="paper">
+	<button type="button" onClick="Typer.pause()">Stop</button>
+</div>
+<audio id="keyboard_sound" loop="true" preload="true" src="keyboard.mp3"></audio>
+<script src="../build/TextTyper.js"></script>
+<script>
+var Typer = TextTyper(document.getElementById('paper'))
+var Sound = document.getElementById('keyboard_sound')
+
+Typer.onStart(function () {
+	Sound.play()
+}).onEnd(function () {
+	Sound.pause()
+})
+Typer.print('Hello world!')
+Typer.print('This message is printed by TextTyper.')
+Typer.print('-- ' + new Date())
+</script>
+</body>
+</html>
